@@ -9,7 +9,7 @@ We call this version ```lightsaft```.
 
 ### Training (Optional, if you want to reproduce checkpoints for yourself)
 
-You can re-training as follows:
+You can re-train ```lightsaft``` as follows:
 
 1. clone https://github.com/ws-choi/Conditioned-Source-Separation-LaSAFT/tree/lightsaft4dmx_9_256
 2. ```python train_lightsaft4dmx.py --musdb_root ../repos/musdb18HQ --gpus 4 --distributed_backend ddp --precision 16 --sync_batchnorm True --pin_memory True --num_workers 64 --seed 2021 --batch_size 16 --log wandb --deterministic True```
