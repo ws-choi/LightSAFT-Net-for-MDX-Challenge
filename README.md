@@ -20,6 +20,19 @@ You can re-train ```lightsaft``` as follows:
 2. bash run.py to test if it works
 3. Follow the [official guideline](https://github.com/AIcrowd/music-demixing-challenge-starter-kit/blob/master/docs/SUBMISSION.md)
 
+## Hyperparmeter comparison
+
+|                          | lightsaft                        | LaSAFT+GPoCM                 | LaSAFT+GPoCM (large)         |
+|--------------------------|----------------------------------|------------------------------|------------------------------|
+| n_fft                    | 2048                             | 2048                         | 4096                         |
+| hop_length               | 1024                             | 1024                         | 1024                         |
+| num_frame                | 256                              | 128                          | 128                          |
+| frequency transformation | [LightSaFT](https://github.com/ws-choi/music-demixing-challenge-starter-kit/blob/15127603f909a738dc745cdf82dbe5f3d26e6058/lasaft/source_separation/conditioned/LaSAFT.py#L34) with 16 Latent Sources | [LaSAFT](https://github.com/ws-choi/music-demixing-challenge-starter-kit/blob/15127603f909a738dc745cdf82dbe5f3d26e6058/lasaft/source_separation/conditioned/LaSAFT.py#L9) with 6 Latent Sources | [LaSAFT](https://github.com/ws-choi/music-demixing-challenge-starter-kit/blob/15127603f909a738dc745cdf82dbe5f3d26e6058/lasaft/source_separation/conditioned/LaSAFT.py#L9) with 6 Latent Sources |
+| # of intermediate layers | 9                                | 7                            | 9                            |
+| # internal channels      | 16                               | 24                           | 24                           |
+| dk and embedding dim     | 64                               | 32                           | 64                           |
+| DMX time constraints     | passed                           | failed                       | failed                       |
+
 ## Authors
 
 - Woosung Choi
