@@ -2,14 +2,14 @@ This implementation is a very light version of the [LaSAFT+GPoCM](https://github
 
 Due to the response time limitation of the DMX challenge, we reduced [its size](https://github.com/ws-choi/music-demixing-challenge-starter-kit/blob/15127603f909a738dc745cdf82dbe5f3d26e6058/lasaft/pretrained/load_pretrained_nets.py#L61) and trained it.
 
-We call this version ```lightsaft```.
+We call this version ```LightSAFT + GPoCM```.
 
 
 ## Reproduction
 
 ### Training (Optional, if you want to reproduce checkpoints for yourself)
 
-You can re-train ```lightsaft``` as follows:
+You can re-train ```LightSAFT + GPoCM``` as follows:
 
 1. clone https://github.com/ws-choi/Conditioned-Source-Separation-LaSAFT/tree/lightsaft4dmx_9_256
 2. ```python train_lightsaft4dmx.py --musdb_root ../repos/musdb18HQ --gpus 4 --distributed_backend ddp --precision 16 --sync_batchnorm True --pin_memory True --num_workers 64 --seed 2021 --batch_size 16 --log wandb --deterministic True```
@@ -22,7 +22,7 @@ You can re-train ```lightsaft``` as follows:
 
 ## Hyperparmeter comparison
 
-|                          | lightsaft                        | LaSAFT+GPoCM                 | LaSAFT+GPoCM (large)         |
+|                          | LightSAFT + GPoCM                        | LaSAFT+GPoCM                 | LaSAFT+GPoCM (large)         |
 |--------------------------|----------------------------------|------------------------------|------------------------------|
 | n_fft                    | 2048                             | 2048                         | 4096                         |
 | hop_length               | 1024                             | 1024                         | 1024                         |
