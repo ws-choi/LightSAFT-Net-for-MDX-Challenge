@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 # a light-weight version of LaSAFT+GPoCM
+
+# Quick Tutorial - How to submit?: see https://github.com/ws-choi/music-demixing-challenge-starter-kit/blob/master/README.md#evaluation
 # Please read README.md from the following link for details :)
 # Github Repository: https://github.com/ws-choi/music-demixing-challenge-starter-kit
 # Github Repository of the original paper: https://github.com/ws-choi/Conditioned-Source-Separation-LaSAFT
