@@ -17,8 +17,9 @@ You can re-train ```LightSAFT + GPoCM``` as follows:
 
 ### Evaluation
 1. clone this repository
-2. bash run.py to test if it works
-3. Follow the [official guideline](https://github.com/AIcrowd/music-demixing-challenge-starter-kit/blob/master/docs/SUBMISSION.md)
+2. downlaod ```lightsaft_small_2020.ckpt``` using ```git lfs pull``` 
+3. bash run.py to test if it works.
+4. Follow the [official guideline](https://github.com/AIcrowd/music-demixing-challenge-starter-kit/blob/master/docs/SUBMISSION.md)
 
 ## Hyperparmeter comparison
 
