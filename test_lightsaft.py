@@ -1,30 +1,18 @@
 #!/usr/bin/env python
-#
-# This file uses openunmix for music demixing.
-# It is one of official baseline for Music Demixing challenge.
-#
-# NOTE: openunmix need checkpoints to be submitted along with your code.
-#
-# Making submission using openunmix:
-# 1. Change the model in `predict.py` to UMXPredictor.
-# 2. Run this file locally with `python test_umx.py`.
-# 3. Submit your code using git-lfs
-#    #> git lfs install
-#    #> git lfs track "*.pth"
-#    #> git add .gitattributes
-#    #> git add models
-#
-from torch.utils.data import Dataset, DataLoader
+
+# a light-weight version of LaSAFT+GPoCM
+# Please read README.md from the following link for details :)
+# Github Repository: https://github.com/ws-choi/music-demixing-challenge-starter-kit
+# Github Repository of the original paper: https://github.com/ws-choi/Conditioned-Source-Separation-LaSAFT
+# Lasaft Demo site: https://lasaft.github.io/
+
+import soundfile as sf
+import torch
+from torch.utils.data import DataLoader
 
 from evaluator.music_demixing import MusicDemixingPredictor
-import torch
-import numpy as np
-import soundfile as sf
-from tqdm import tqdm
 from lasaft.data.musdb_wrapper import SingleTrackSet
-from lasaft.pretrained import PreTrainedLaSAFTNet
 from lasaft.pretrained.load_pretrained_nets import PreTrainedLightSAFTNet
-
 
 class LightSAFTPredictor(MusicDemixingPredictor):
     def prediction_setup(self):

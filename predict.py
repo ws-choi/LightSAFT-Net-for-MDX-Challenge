@@ -1,6 +1,6 @@
 from test_lightsaft import LightSAFTPredictor
 
-# a light-weight version of the following paper
+# a light-weight version of LaSAFT+GPoCM
 
 """
 @inproceedings{choi2021lasaft,
@@ -15,6 +15,7 @@ from test_lightsaft import LightSAFTPredictor
 
 # Github Repository: https://github.com/ws-choi/music-demixing-challenge-starter-kit
 # Github Repository of the original paper: https://github.com/ws-choi/Conditioned-Source-Separation-LaSAFT
+# Demonstration site of the original paper: https://lasaft.github.io/
 
 lightsaft_predictor = LightSAFTPredictor()
 submission = lightsaft_predictor
