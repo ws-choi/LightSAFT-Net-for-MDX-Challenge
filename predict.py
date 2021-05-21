@@ -1,31 +1,22 @@
-from test import CopyPredictor, ScaledMixturePredictor
-from test_lasaft import LaSAFTPredictor
-
-# # Predictor which does nothing
-# copy_predictor = CopyPredictor()
-#
-# # Predictor which uses 1/4*mixture as separations
-# scaledmixture_predictor = ScaledMixturePredictor()
-#
-# # UMX needs `models` folder to be present in your submission, check test_umx.py to learn more
-# umx_predictor = UMXPredictor()
-#
-# # X-UMX needs `models` folder to be present in your submission, check test_xumx.py to learn more
-# xumx_predictor = XUMXPredictor()
 from test_lightsaft import LightSAFTPredictor
 
-lasaft_predictor = LightSAFTPredictor()
+# a light-weight version of the following paper
+
 """
-PARTICIPANT_TODO: The implementation you want to submit as your submission
+@inproceedings{choi2021lasaft,
+  title={LaSAFT: Latent Source Attentive Frequency Transformation for Conditioned Source Separation},
+  author={Choi, Woosung and Kim, Minseok and Chung, Jaehwa and Jung, Soonyoung},
+  booktitle={ICASSP 2021-2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={171--175},
+  year={2021},
+  organization={IEEE}
+}
 """
-import time
 
-submission = lasaft_predictor
+# Github Repository: https://github.com/ws-choi/music-demixing-challenge-starter-kit
+# Github Repository of the original paper: https://github.com/ws-choi/Conditioned-Source-Separation-LaSAFT
 
-print("start")
-
-start = time.time()
+lightsaft_predictor = LightSAFTPredictor()
+submission = lightsaft_predictor
 submission.run()
-end = time.time()
-print(end-start)
 print("Successfully completed music demixing...")
